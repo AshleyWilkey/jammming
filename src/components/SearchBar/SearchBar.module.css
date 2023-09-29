@@ -1,0 +1,39 @@
+.SearchBar {
+  color: var(--secondary-bg-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background: none;
+  border: none;
+  width: 100%;
+  height: 30px;
+  margin-left: 0.3rem;
+}
+
+.SearchBar:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.SearchBar-container {
+  display: flex;
+  background: none;
+  max-width: 360px;
+  width: 78%;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 0.2rem 0.5rem 0.2rem 1rem;
+  transition: 0.2s;
+}
+
+.SearchBar-submit {
+  position: relative;
+  border-radius: 25px;
+  padding: 0.3rem 0.6rem;
+  background-color: rgb(192, 255, 108);
+  border: none;
+}
+.SearchBar-icon {
+  position: relative;
+  top: 8px;
+}

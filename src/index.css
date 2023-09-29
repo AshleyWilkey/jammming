@@ -1,13 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Montserrat:wght@100;300;400&family=Space+Mono&display=swap");
+
+:root {
+  --main-bg-color: #061818;
+  --main-fg-color: #0c2e2e;
+  --main-accent-color: #9fbfaf;
+  --main-text-color: #d4ffe9;
+  --secondary-text-color: #bee6d2;
+  --secondary-bg-color: #6a8075;
+}
+
 body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

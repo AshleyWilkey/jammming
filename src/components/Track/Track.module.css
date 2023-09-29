@@ -1,0 +1,29 @@
+.Track {
+  display: flex;
+  height: 64px;
+  padding: 0.3rem;
+  border-bottom: 1px solid var(--main-bg-color);
+}
+.Track:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: 0.2s;
+}
+.Track-info {
+  flex: 1;
+  text-align: left;
+  margin-left: 1rem;
+  padding: 0.2rem;
+}
+
+.Track-info h3,
+.Track-info h4,
+.Track-info h5 {
+  margin: 0;
+}
+.Track-info h3 {
+  font-size: 1.3rem;
+}
+.Track-info h4,
+.Track-info h5 {
+  font-weight: 100;
+}
