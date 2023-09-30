@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Track.module.css";
 
 function Track(props) {
@@ -12,6 +13,12 @@ function Track(props) {
         </h4>
         <h5>{new Date(props.track.album.release_date).getFullYear()}</h5>
       </div>
+      <button
+        className={styles["Track-button"]}
+        onClick={() => props.handleAction(props.track)}
+      >
+        <FontAwesomeIcon icon={props.faActionIcon} />
+      </button>
     </div>
   );
 }

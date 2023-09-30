@@ -15,6 +15,17 @@ function App() {
     setSearchResults(data.tracks.items);
   }
 
+  function addTrackToPlaylist(track) {
+    setPlaylist((prev) => {
+      if (prev.some((el) => el.id === track.id)) return prev;
+      return [...prev, track];
+    });
+  }
+
+  function removeTrackFromPlaylist(track) {
+    setPlaylist((prev) => prev.filter((el) => el.id !== track.id));
+  }
+
   return (
     <div className="App">
       <h1 className="App-logo">
@@ -23,10 +34,13 @@ function App() {
       <SearchBar handleSearch={handleSearch} />
       <div className="App-columns">
         <div className="App-column">
-          <SearchResults results={searchResults} />
+          <SearchResults
+            results={searchResults}
+            addTrack={addTrackToPlaylist}
+          />
         </div>
         <div className="App-column">
-          <Playlist playlist={playlist} />
+          <Playlist playlist={playlist} removeTrack={removeTrackFromPlaylist} />
         </div>
       </div>
     </div>

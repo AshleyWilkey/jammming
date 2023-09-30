@@ -5,8 +5,13 @@ import styles from "../TrackList/TrackList.module.css";
 function TrackList(props) {
   return (
     <div className={styles["TrackList"]}>
-      {props.tracks.map((track) => (
-        <Track key={track.id} track={track} />
+      {props.tracks.map((track, idx) => (
+        <Track
+          key={track.id + idx}
+          track={track}
+          faActionIcon={props.faActionIcon}
+          handleAction={props.handleAction}
+        />
       ))}
     </div>
   );
