@@ -1,0 +1,11 @@
+.Toast {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 0 2rem;
+}
+
+.Toast-success {
+  background-color: rgb(131, 236, 131);
+  color: green;
+}

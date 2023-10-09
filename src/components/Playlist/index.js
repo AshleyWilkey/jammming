@@ -14,7 +14,7 @@ function Playlist(props) {
         faActionIcon={faSubtract}
         handleAction={props.removeTrack}
       />
-      <button className={styles["Playlist-button"]}>
+      <button className={styles["Playlist-button"]} onClick={props.handleSave}>
         Save to Spotify{" "}
         <FontAwesomeIcon icon={faSpotify} style={{ color: "#07da31" }} />
       </button>
