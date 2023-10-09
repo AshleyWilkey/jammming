@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Track.module.css";
 import { truncate } from "../../utils";
@@ -6,7 +6,10 @@ import { truncate } from "../../utils";
 function Track(props) {
   return (
     <div className={styles.Track}>
-      <img src={props.track.album.images[2].url} />
+      <img
+        src={props.track.album.images[2].url}
+        alt={props.track.album.name + " album cover"}
+      />
       <div className={styles["Track-info"]}>
         <h3>{truncate(props.track.name, 28)}</h3>
         <h4>

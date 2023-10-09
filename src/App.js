@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import "./App.css";
 import Playlist from "./components/Playlist";
 import SearchBar from "./components/SearchBar";
@@ -14,7 +14,7 @@ function App() {
   const queryParams = url.searchParams;
   const spotifyAccessToken = queryParams.get("access_token");
   const spotifyState = queryParams.get("state");
-  const spotify = new Spotify(spotifyClientId);
+  const spotify = useMemo(() => new Spotify(spotifyClientId), []);
 
   useEffect(() => {
     if (spotifyState && spotifyState === localStorage.getItem("spotifyState")) {
@@ -23,7 +23,7 @@ function App() {
     if (!localStorage.getItem("spotifyAccessToken")) {
       spotify.redirectToAccessTokenFlow();
     }
-  }, []);
+  }, [spotify, spotifyAccessToken, spotifyState]);
 
   async function handleSearch(searchTerm) {
     // make api call to spotify using search term
